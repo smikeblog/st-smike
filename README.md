@@ -31,6 +31,9 @@
     note) fail   need manual patching
 
 NOTE: The dmenu url, copy url is taken from lukesmithxyz-s st-luke.git     
-
+        - fonts used 
+            mono    from original st sources
+            Inconsolata for Powerline    - yay -S powerline-fonts
+            Hack Nerd Font Mono          - yay -S nerd-fonts-hack
   
 
