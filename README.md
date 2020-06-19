@@ -8,12 +8,13 @@
   mkdir patches
 
 # Put patches in this dir.
-  1)  st-alpha-0.8.2.diff 			transparency with picom
-  2)  st-scrollback-20200419-72e3f6c.diff       scroll capability
-  3)  st-copyurl-20190202-3be4cf1.diff 		copy url from terminal screen
-  4)  st-externalpipe-0.8.2.diff		use dmenu to open url in $BROWSER
-  4a) st-externalpipe-eternal-0.8.3.diff	use dmenu to open url in $BROWSER
-  5)  st-font2-20190416-ba72400.diff                additional fonts
+  1)  st-alpha 			            transparency with picom
+    1a) Alpha Focus Highlight       specify two opacity/background colors
+  2)  st-scrollback                 scroll capability
+  3)  st-copyurl 		            copy url from terminal screen
+  4)  st-externalpipe		        use dmenu to open url in $BROWSER
+    4a) st-externalpipe-eternal	    use dmenu to open url in $BROWSER
+  5)  st-font2                      additional fonts
 
 # Patch procedure as I do
 
