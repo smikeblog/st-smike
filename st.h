@@ -83,8 +83,8 @@ void draw(void);
 
 void kscrolldown(const Arg *);
 void kscrollup(const Arg *);
-void printscreen(const Arg *);
 void externalpipe(const Arg *);
+void printscreen(const Arg *);
 void printsel(const Arg *);
 void sendbreak(const Arg *);
 void toggleprinter(const Arg *);
