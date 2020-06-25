@@ -1,6 +1,6 @@
 # st-smike
-### version 0.8.3
-### tested on Manjaro and Arch with Openbox
+### version 0.8.4
+### tested on Manjaro, MX and Arch with Openbox
 
 # Download st from suckless.org
 
