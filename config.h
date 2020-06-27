@@ -9,7 +9,7 @@ static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
-	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", 
+	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true",
 };
 
 static int borderpx = 2;
@@ -204,7 +204,8 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
-#define TERMMOD (ControlMask|ShiftMask)
+/* #define TERMMOD (ControlMask|ShiftMask) */
+#define TERMMOD (Mod1Mask|ShiftMask)
 
 static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler", "externalpipe", NULL };
 
@@ -225,7 +226,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
-    { MODKEY,               XK_v,           clippaste,      {.i =  0} },	
+    { MODKEY,               XK_v,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },

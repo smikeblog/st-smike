@@ -2,6 +2,26 @@
 ### version 0.8.4
 ### tested on Manjaro, MX and Arch with Openbox
 
+## Unique features (using dmenu)
+
++ **follow urls** by pressing `alt-m`
++ **copy urls** in the same way with `alt-b`
+
+## Bindings for
+
++ **scrollback** with `alt-↑/↓` or `alt-pageup/down`
++ **zoom/change font size**: `alt-shift-pageup/down` . `alt-shift-home` returns to default
++ **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
+
+## Pretty stuff
+
++ Default dracula colors.
++ Transparency/alpha.
++ Default font is system "mono" at 12pt, meaning the font will match your system font.
+
+
+# INSTALL
+
 # Download st from suckless.org
 
 # Make dir for patches
