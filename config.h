@@ -105,24 +105,24 @@ float alpha = 0.8, alphaUnfocused = 0.6;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-  [0] = "#000000", /* black   */
-  [1] = "#ff5555", /* red     */
-  [2] = "#50fa7b", /* green   */
-  [3] = "#f1fa8c", /* yellow  */
-  [4] = "#bd93f9", /* blue    */
-  [5] = "#ff79c6", /* magenta */
-  [6] = "#8be9fd", /* cyan    */
+  [0] = "#282c34", /* black   */
+  [1] = "#c9454f", /* red     */
+  [2] = "#35bb9a", /* green   */
+  [3] = "#e5c07b", /* yellow  */
+  [4] = "#0680ec", /* blue    */
+  [5] = "#8850c5", /* magenta */
+  [6] = "#049a9c", /* cyan    */
   [7] = "#bbbbbb", /* white   */
 
 	/* 8 bright colors */
-  [8]  = "#44475a", /* black   */
-  [9]  = "#ff5555", /* red     */
-  [10] = "#50fa7b", /* green   */
-  [11] = "#f1fa8c", /* yellow  */
-  [12] = "#bd93f9", /* blue    */
-  [13] = "#ff79c6", /* magenta */
-  [14] = "#8be9fd", /* cyan    */
-  [15] = "#ffffff", /* white   */
+  [8]  = "#848587", /* black   */
+  [9]  = "#db525d", /* red     */
+  [10] = "#58c379", /* green   */
+  [11] = "#cdb993", /* yellow  */
+  [12] = "#4592d4", /* blue    */
+  [13] = "#af85ef", /* magenta */
+  [14] = "#68c5e6", /* cyan    */
+  [15] = "#d3dae3", /* white   */
 
 //	[255] = 0,
 
