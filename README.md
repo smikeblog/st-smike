@@ -2,15 +2,18 @@
 ### version 0.8.4
 ### tested on Manjaro, MX and Arch with Openbox
 
-## Unique features (using dmenu)
+## features using dmenu
 
 + **follow urls** by pressing `alt-m`
-+ **copy urls** in the same way with `alt-b`
++ **copy urls** in the same way with `alt-y`
++ **copy url with `alt-b`
++ edit screen in $EDITOR with `alt-e`
++ copy the output of commands with `alt-o`
 
 ## Bindings for
 
-+ **scrollback** with `alt-↑/↓` or `alt-pageup/down`
-+ **zoom/change font size**: `alt-shift-pageup/down` . `alt-shift-home` returns to default
++ **scrollback** with `alt-↑/↓` or `alt-k/j`or `alt-pageup/down`
++ **zoom/change font size**: `alt-l/h` or `alt-shift-pageup/down` . `alt-shift-home` or `alt-home ` returns to default
 + **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
 
 ## Pretty stuff
@@ -49,7 +52,7 @@
   5) patch -Np1 -i patches/st-font2-*.diff
     note) fail   need manual patching
 
-NOTE: The dmenu url, copy url is taken from lukesmithxyz-s st-luke.git
+NOTE: The dmenu url, copy url are from lukesmithxyz  st-luke.git
 ```
         - fonts used
             mono    from original st sources
