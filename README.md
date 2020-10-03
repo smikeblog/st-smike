@@ -6,9 +6,9 @@
 
 + **follow urls** by pressing `alt-m`
 + **copy urls** in the same way with `alt-y`
-+ **copy url with `alt-b`
-+ edit screen in $EDITOR with `alt-e`
-+ copy the output of commands with `alt-o`
++ **paste copied urls** with `alt-v` or `shift-insert`
++ **copy urls** with `alt-b`
++ **visualize screen in neovim with `alt-escape`
 
 ## Bindings for
 
@@ -52,7 +52,7 @@
   5) patch -Np1 -i patches/st-font2-*.diff
     note) fail   need manual patching
 
-NOTE: The dmenu url, copy url are from lukesmithxyz  st-luke.git
+NOTE: The dmenu url, copy url are from https://github.com/GasparVardanyan/st/blob/master/config.h#L186
 ```
         - fonts used
             mono    from original st sources

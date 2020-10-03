@@ -204,18 +204,31 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
-/* #define TERMMOD (ControlMask|ShiftMask) */
-#define TERMMOD (Mod1Mask|ShiftMask)
+#define TERMMOD (ControlMask|ShiftMask)
 
-static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler", "externalpipe", NULL };
+/* url matcher */
+# define XURLS "perl -ne \"/(\\b([a-zA-Z]+:\\/\\/\\w[\\w-.:@]*|www\\.\\w[\\w-]*\\.\\w[\\w-.]*)(\\/[^\\\"' ()]*)?)/ && print\\\"\\$1\\n\\\"\" | tac | awk '!visited[$0]++'"
 
+/* open urls */
+static char *openurlcmd[] = { "/bin/sh", "-c",
+	"url=\"$("XURLS" | dmenu -p open: -l 10)\"; [ \"$url\" != \"\" ] && $BROWSER $url", NULL };
+
+/* copy urls */
 static char *copyurlcmd[] = { "/bin/sh", "-c",
-    "tmp=$(sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./@$&%?$#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)' | uniq | sed 's/^www./http:\\/\\/www\\./g' ); IFS=; [ ! -z $tmp ] && echo $tmp | dmenu -i -p 'Copy which url?' -l 10 | tr -d '\n' | xclip -selection clipboard",
-    "externalpipe", NULL };
+	"url=\"$("XURLS" | dmenu -p copy: -l 10)\"; [ \"$url\" != \"\" ] && echo $url | xsel -ib", NULL };
 
-static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
+/* open last url */
+static char *openlasturlcmd[] = { "/bin/sh", "-c",
+	"url=\"$("XURLS" | sed '1!d')\"; [ \"$url\" != \"\" ] && $BROWSER $url", NULL };
 
-static char *editscreen[] = { "/bin/sh", "-c", "st-editscreen", "externalpipe", NULL };
+/* visual select */
+static const char *visualselectcmd [] = { "/bin/sh", "-c",
+	"tmp=`mktemp`;"
+	"cat > $tmp;"
+	"(st -n visual-select -g 120x35 -e "
+		"$SHELL -c \"nvim +'%s/ $// | set nonu nornu' $tmp\");"
+		"rm $tmp",
+};
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -254,10 +267,10 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_U,           zoom,           {.f = +2} },
 	{ TERMMOD,              XK_D,           zoom,           {.f = -2} },
 	{ MODKEY,               XK_b,           copyurl,        {.i =  0} },
+	{ MODKEY,               XK_o,           externalpipe,   {.v = openlasturlcmd } },
 	{ MODKEY,               XK_m,           externalpipe,   {.v = openurlcmd } },
 	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
-	{ MODKEY,               XK_e,           externalpipe,   {.v = editscreen } },
+	{ MODKEY,               XK_Escape,      externalpipe,   {.v = visualselectcmd } },
 };
 
 /*
