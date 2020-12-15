@@ -9,7 +9,8 @@ static char *font = "Hack Nerd Font:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
         "Symbola:pixelsize=12:antialias=true:autohint=true",
-	"PowerlineSymbols:pixelsize=12:antialias=true:autohint=true"
+	"PowerlineSymbols:pixelsize=12:antialias=true:autohint=true",
+	"JoyPixels:pixelsize=10:antialias=true:autohint=true"
 };
 
 static int borderpx = 2;
@@ -100,7 +101,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8, alphaUnfocused = 0.6;
+float alpha = 0.8, alphaUnfocused = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -258,8 +259,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
 	{ MODKEY,               XK_Home,        zoomreset,      {.f =  0} },
-	{ MODKEY,               XK_l,           zoom,           {.f = +1} },
-	{ MODKEY,               XK_h,           zoom,           {.f = -1} },
+	{ MODKEY,               XK_o,           zoom,           {.f = +1} },
+	{ MODKEY,               XK_l,           zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Up,          zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Down,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
@@ -267,7 +268,6 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_U,           zoom,           {.f = +2} },
 	{ TERMMOD,              XK_D,           zoom,           {.f = -2} },
 	{ MODKEY,               XK_b,           copyurl,        {.i =  0} },
-	{ MODKEY,               XK_o,           externalpipe,   {.v = openlasturlcmd } },
 	{ MODKEY,               XK_m,           externalpipe,   {.v = openurlcmd } },
 	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
 	{ MODKEY,               XK_Escape,      externalpipe,   {.v = visualselectcmd } },
@@ -275,6 +275,7 @@ static Shortcut shortcuts[] = {
 
 /*
  * Special keys (change & recompile st.info accordingly)
+	{ MODKEY,               XK_o,           externalpipe,   {.v = openlasturlcmd } },
  *
  * Mask value:
  * * Use XK_ANY_MOD to match the key no matter modifiers state
