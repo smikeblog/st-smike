@@ -4,7 +4,7 @@
 
 ## features using dmenu
 
-+ **follow urls** by pressing `alt-m`
++ **follow urls** by pressing `alt-a`
 + **copy urls** in the same way with `alt-y`
 + **paste copied urls** with `alt-v` or `shift-insert`
 + **copy urls** with `alt-b`
@@ -12,8 +12,8 @@
 
 ## Bindings for
 
-+ **scrollback** with `alt-↑/↓` or `alt-k/j`or `alt-pageup/down`
-+ **zoom/change font size**: `alt-l/h` or `alt-shift-pageup/down` . `alt-shift-home` or `alt-home ` returns to default
++ **scrollback** with `alt-pageup/pagedown`
++ **zoom/change font size**: `alt-l/o` `alt-home ` returns to default
 + **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
 
 ## Pretty stuff
