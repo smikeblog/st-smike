@@ -212,7 +212,7 @@ static MouseShortcut mshortcuts[] = {
 
 /* open urls */
 static char *openurlcmd[] = { "/bin/sh", "-c",
-	"url=\"$("XURLS" | dmenu -p open: -l 10)\"; [ \"$url\" != \"\" ] && $BROWSER $url", NULL };
+	"url=\"$("XURLS" | dmenu -p open: -l 10)\"; [ \"$url\" != \"\" ] && \"$HOME/.local/bin/linkhandler\" $url", NULL };
 
 /* copy urls */
 static char *copyurlcmd[] = { "/bin/sh", "-c",
