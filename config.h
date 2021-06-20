@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack Nerd Font:pixelsize=12:antialias=true:autohint=true";
+static char *font = "FiraCode Nerd Font:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-        "Symbola:pixelsize=12:antialias=true:autohint=true",
+    "Symbola:pixelsize=12:antialias=true:autohint=true",
 	"PowerlineSymbols:pixelsize=12:antialias=true:autohint=true",
 	"JoyPixels:pixelsize=10:antialias=true:autohint=true"
 };
