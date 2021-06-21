@@ -55,8 +55,10 @@
 NOTE: The dmenu url, copy url are from https://github.com/GasparVardanyan/st/blob/master/config.h#L186
 ```
         - fonts used
-            mono    from original st sources
-            Inconsolata for Powerline    - yay -S powerline-fonts
-            Hack Nerd Font Mono          - yay -S nerd-fonts-hack
+            FiraCode Nerd Font
+            Symbola
+            PowerlineSymbols
+            JoyPixels
 ```
+__NOTE: to install see https://github.com/smikeblog/dotfiles/  the fonts section __
 
